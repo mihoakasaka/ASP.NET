@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="TimeTracker2.Default1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Time Tracker Application</title>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- HEADER -->
+    <div style="float:left;width:50%;text-align:left;font-size:16pt;font-weight:bold">
+        TIME TRACKER Web Application
+    </div>
+    <div style="float:right;width:45%;text-align:right;">
+        <asp:Label ID="lbDate" runat="server" Text=""></asp:Label> 
+    </div>
+    <br />
+    <!-- MAIN BODY -->
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="mainContentPH" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <br />
+    <!-- FOOTER -->
+    &copy; 2018
+</body>
+</html>
