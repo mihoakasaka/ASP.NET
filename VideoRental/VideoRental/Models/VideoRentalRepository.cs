@@ -10,7 +10,7 @@ namespace VideoRental.Models
         VideoRentalDBContext db = new VideoRentalDBContext();
 
        
-        public List<Customer> getAllEmployees()
+        public List<Customer> GetAllEmployees()
         {
             List<Customer> allCust =
                 (from data in db.Customers
@@ -19,30 +19,31 @@ namespace VideoRental.Models
             return allCust;
         }
 
-        public Customer getCustomerById(int id) {
+        public Customer GetCustomerById(int id) {
             Customer cust = (from data in db.Customers
                              where data.ID == id
                              select data).SingleOrDefault();
             return cust;
         }
 
-        public void updateCustomer(Customer c) {
+        public void UpdateCustomer(int ID, string FirstName, string LastName, string Address, string Phone) {
             Customer cust = (from data in db.Customers
-                             where data.ID == c.ID
+                             where data.ID == ID
                              select data).SingleOrDefault();
-            cust.FirstName = c.FirstName;
-            cust.LastName = c.LastName;
-            cust.Address = c.Address;
-            cust.Phone = c.Phone;
+            cust.FirstName = FirstName;
+            cust.LastName = LastName;
+            cust.Address = Address;
+            cust.Phone = Phone;
+            db.SaveChanges();
         }
 
 
 
-        public void addCustomer(int ID, string firstName, string lastName,
+        public void AddCustomer( string firstName, string lastName,
             string address, string phone)
         {
             Customer e = new Customer();
-            e.ID = ID;
+            
             e.FirstName = firstName;
             e.LastName = lastName;
             e.Address = address;
@@ -52,11 +53,11 @@ namespace VideoRental.Models
             db.SaveChanges();
         }
 
-        public void addNewMedia(int ID, string title, string type,
+        public void AddNewMedia(string title, string type,
           int year)
         {
             Media m = new Media();
-            m.ID = ID;
+        
             m.Title = title;
             m.Type = type;
             m.ProducedYear = year;
@@ -66,7 +67,7 @@ namespace VideoRental.Models
         }
 
 
-        public List<Media> getMediaByTitle(string title) {
+        public List<Media> GetMediaByTitle(string title) {
             List<Media> mediaList = (from data in db.Medias
                                    //  where clause 
                                      select data).ToList();
