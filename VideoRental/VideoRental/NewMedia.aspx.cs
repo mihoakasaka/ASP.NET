@@ -28,7 +28,7 @@ namespace VideoRental
 
 
                 db.AddNewMedia(title, type, year);
-
+                Response.Redirect("~/Default.aspx");
             }
         }
 

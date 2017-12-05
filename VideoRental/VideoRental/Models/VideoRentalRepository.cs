@@ -69,7 +69,7 @@ namespace VideoRental.Models
 
         public List<Media> GetMediaByTitle(string title) {
             List<Media> mediaList = (from data in db.Medias
-                                   //  where clause 
+                                     where data.Title.Contains(title)
                                      select data).ToList();
 
             return mediaList;

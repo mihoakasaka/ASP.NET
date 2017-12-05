@@ -13,6 +13,8 @@ namespace VidPlace
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
@@ -25,11 +27,13 @@ namespace VidPlace
                 defaults: new { controller = "test", action = "getString", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
+         /*   routes.MapRoute(
               name: "Media-index",
               url: "{controller}/{action}/{pageIndex}/{sortBy}",
-              defaults: new { controller = "Media", action = "Index", pageIndex = UrlParameter.Optional ,sortBy = UrlParameter.Optional}
+              defaults: new { controller = "Media", action = "Index"  }
           );
+
+     */
         }
     }
 }

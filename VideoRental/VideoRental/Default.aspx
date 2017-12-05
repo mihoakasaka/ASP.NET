@@ -9,12 +9,13 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Button ID="btCustomers" runat="server" Text="Customers" Width="132px" />
-            <asp:Button ID="btMedia" runat="server" Text="Rent Media" Width="132px" />
+            
+            <asp:ImageButton ID="btCustomers" runat="server"  Width="132px" PostBackUrl="Customers.aspx" ImageUrl="~/Image/man.jfif"/>
+            <asp:ImageButton ID="btMedia" runat="server" Text="Rent Media" Width="132px" PostBackUrl="RentaMedia.aspx" ImageUrl="~/Image/disc.png" />
             <br />
             <br />
-            <asp:Button ID="btAddCustomer" runat="server" Text="New Customer" Width="132px" />
-            <asp:Button ID="btAddMedia" runat="server" Text="New Media" Width="132px" />
+            <asp:ImageButton ID="btAddCustomer" runat="server" Text="New Customer" Width="132px" PostBackUrl="NewCustomer.aspx" ImageUrl="~/Image/newCustomer.png"/>
+            <asp:ImageButton ID="btAddMedia" runat="server" Text="New Media" Width="132px" PostBackUrl="NewMedia.aspx" ImageUrl="~/Image/newMeida.jfif" />
         </div>
     </form>
 </body>

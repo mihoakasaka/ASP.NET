@@ -36,7 +36,7 @@ namespace VideoRental
                 };
 
                 db.AddCustomer( fname, lname, address, phone);
-
+                Response.Redirect("~/Default.aspx");
             }
         }
 

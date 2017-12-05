@@ -12,13 +12,37 @@ namespace VidPlace.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            return View();
+
+            List<Customer> custList =  (from cust in GetCustomer()
+                                               select cust).ToList();
+            return View(custList);
         }
-        public ActionResult GetCustomer()
+        public List<Customer> GetCustomer()
         {
-            Customer cust = new Customer() {Name="John", Address="123 Hadley",ID=777};
+            List<Customer> list = new List<Customer> {
+             new Customer() {Name="John", Address="123 Hadley",ID=777},
+            new Customer() { Name = "Gracy Gold", Address = "123 Guy", ID = 111 }
+        };
+            return list;
+            
+        }
+
+        [Route("detail/{id}")]
+        public ActionResult Detail(int id)
+        {
+
+
+            Customer cust = (from data in GetCustomer()
+                             where data.ID == id
+                             select data).SingleOrDefault();
+            if (cust == null) {
+                return HttpNotFound();
+            }
 
             return View(cust);
         }
+      
+
+
     }
 }

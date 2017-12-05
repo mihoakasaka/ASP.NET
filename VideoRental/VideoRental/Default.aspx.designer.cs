@@ -28,7 +28,7 @@ namespace VideoRental {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btCustomers;
+        protected global::System.Web.UI.WebControls.ImageButton btCustomers;
         
         /// <summary>
         /// btMedia control.
@@ -37,7 +37,7 @@ namespace VideoRental {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btMedia;
+        protected global::System.Web.UI.WebControls.ImageButton btMedia;
         
         /// <summary>
         /// btAddCustomer control.
@@ -46,7 +46,7 @@ namespace VideoRental {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btAddCustomer;
+        protected global::System.Web.UI.WebControls.ImageButton btAddCustomer;
         
         /// <summary>
         /// btAddMedia control.
@@ -55,6 +55,6 @@ namespace VideoRental {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btAddMedia;
+        protected global::System.Web.UI.WebControls.ImageButton btAddMedia;
     }
 }
