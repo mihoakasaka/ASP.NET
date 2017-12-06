@@ -198,11 +198,57 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712061552449_InitialMigration.cs" />
+    <Compile Include="Migrations\201712061552449_InitialMigration.Designer.cs">
+      <DependentUpon>201712061552449_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061619247_updateCustomerPropertyNewsLetter.cs" />
+    <Compile Include="Migrations\201712061619247_updateCustomerPropertyNewsLetter.Designer.cs">
+      <DependentUpon>201712061619247_updateCustomerPropertyNewsLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061633376_updateMemberShipTypeClass.cs" />
+    <Compile Include="Migrations\201712061633376_updateMemberShipTypeClass.Designer.cs">
+      <DependentUpon>201712061633376_updateMemberShipTypeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061637462_PopulateMembershipType.cs" />
+    <Compile Include="Migrations\201712061637462_PopulateMembershipType.Designer.cs">
+      <DependentUpon>201712061637462_PopulateMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061727167_AnnotationToCUstomerClass.cs" />
+    <Compile Include="Migrations\201712061727167_AnnotationToCUstomerClass.Designer.cs">
+      <DependentUpon>201712061727167_AnnotationToCUstomerClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061822090_addNameToMembershipTypeClass.cs" />
+    <Compile Include="Migrations\201712061822090_addNameToMembershipTypeClass.Designer.cs">
+      <DependentUpon>201712061822090_addNameToMembershipTypeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061823539_addNameDataInMemberShips.cs" />
+    <Compile Include="Migrations\201712061823539_addNameDataInMemberShips.Designer.cs">
+      <DependentUpon>201712061823539_addNameDataInMemberShips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061835129_addNameDataInMemberShips2.cs" />
+    <Compile Include="Migrations\201712061835129_addNameDataInMemberShips2.Designer.cs">
+      <DependentUpon>201712061835129_addNameDataInMemberShips2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061839304_AddBirthdayToCustomerClass.cs" />
+    <Compile Include="Migrations\201712061839304_AddBirthdayToCustomerClass.Designer.cs">
+      <DependentUpon>201712061839304_AddBirthdayToCustomerClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061856030_AddNullableBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\201712061856030_AddNullableBirthdayToCustomer.Designer.cs">
+      <DependentUpon>201712061856030_AddNullableBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061857317_AddNullableBirthdayToCustomer2.cs" />
+    <Compile Include="Migrations\201712061857317_AddNullableBirthdayToCustomer2.Designer.cs">
+      <DependentUpon>201712061857317_AddNullableBirthdayToCustomer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Media.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\customerMediaViewModel.cs" />
@@ -293,6 +339,41 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712061552449_InitialMigration.resx">
+      <DependentUpon>201712061552449_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061619247_updateCustomerPropertyNewsLetter.resx">
+      <DependentUpon>201712061619247_updateCustomerPropertyNewsLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061633376_updateMemberShipTypeClass.resx">
+      <DependentUpon>201712061633376_updateMemberShipTypeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061637462_PopulateMembershipType.resx">
+      <DependentUpon>201712061637462_PopulateMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061727167_AnnotationToCUstomerClass.resx">
+      <DependentUpon>201712061727167_AnnotationToCUstomerClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061822090_addNameToMembershipTypeClass.resx">
+      <DependentUpon>201712061822090_addNameToMembershipTypeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061823539_addNameDataInMemberShips.resx">
+      <DependentUpon>201712061823539_addNameDataInMemberShips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061835129_addNameDataInMemberShips2.resx">
+      <DependentUpon>201712061835129_addNameDataInMemberShips2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061839304_AddBirthdayToCustomerClass.resx">
+      <DependentUpon>201712061839304_AddBirthdayToCustomerClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061856030_AddNullableBirthdayToCustomer.resx">
+      <DependentUpon>201712061856030_AddNullableBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061857317_AddNullableBirthdayToCustomer2.resx">
+      <DependentUpon>201712061857317_AddNullableBirthdayToCustomer2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

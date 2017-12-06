@@ -117,3 +117,15 @@ D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.csprojResolveAssemblyReference.c
 D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.csproj.CoreCompileInputs.cache
 D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.dll
 D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.pdb
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.InitialMigration.resources
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.csproj.GenerateResource.Cache
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.updateCustomerPropertyNewsLetter.resources
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.updateMemberShipTypeClass.resources
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.PopulateMembershipType.resources
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.AnnotationToCUstomerClass.resources
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.addNameToMembershipTypeClass.resources
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.addNameDataInMemberShips.resources
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.addNameDataInMemberShips2.resources
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.AddBirthdayToCustomerClass.resources
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.AddNullableBirthdayToCustomer.resources
+D:\ASP.NET\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.AddNullableBirthdayToCustomer2.resources

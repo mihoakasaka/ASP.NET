@@ -1,20 +1,25 @@
-﻿@model List<VidPlace.Models.Media>
+﻿@model IEnumerable<VidPlace.Models.Media>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>List of media</h2>
 
-<table>
-    <tr><th>ID</th><th>Title</th></tr>
-
-    @foreach (var m in Model)
-    {
-        <tr>
-            <td width="100">@m.ID</td>
-            <td width="150">@m.Name</td>
-        </tr>
-    }
-       
-</table>
+Media List:
+@if (!Model.Any())
+{
+    <h3>No medias</h3>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead> <tr><th>ID</th><th>Titile</th></tr></thead>
+        <tbody>
+            @foreach (var data in Model)
+            {
+                <tr> <td>@data.ID</td><td>@data.Name</td></tr>
+            }
+            <
+        </tbody>
+    </table>
+}

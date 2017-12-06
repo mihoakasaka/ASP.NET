@@ -13,17 +13,16 @@ namespace VidPlace.Controllers
         public ActionResult Index()
         {
 
-            List<Media> mediaList = (from m in GetAllMedia()
-                                       select m).ToList();
+            IEnumerable<Media> mediaList = GetAllMedia();
             return View(mediaList);
         }
-        public List<Media> GetAllMedia()
+        public IEnumerable<Media> GetAllMedia()
         {
-            List<Media> list = new List<Media> {
+            return  new List<Media> {
              new Media() {ID=123, Name="Avatar"},
             new Media() {ID=456, Name = "Pinocchio"}
         };
-            return list;
+          
 
         }
 

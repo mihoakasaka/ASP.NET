@@ -4,26 +4,57 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VidPlace.Models;
+using System.Data.Entity;
 
 namespace VidPlace.Controllers
 {
     public class CustomerController : Controller
     {
+        //class variable
+        private ApplicationDbContext db;
+       // class constructor
+        public CustomerController()
+            {
+            db = new ApplicationDbContext();
+        }
+
+        public ActionResult Index()
+        {
+            var custmers = db.Customers.Include(c=>c.MembershipType).ToList();
+            return View(custmers);
+        }
+
+        
+
+        [Route("detail/{id}")]
+        public ActionResult Detail(int id)
+        {
+
+
+            Customer cust = db.Customers.Include(c=>c.MembershipType).SingleOrDefault(c=>c.ID == id);
+            if (cust == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(cust);
+        }
+
         // GET: Customer
+        /************ Excercise ********
         public ActionResult Index()
         {
 
-            List<Customer> custList =  (from cust in GetCustomer()
-                                               select cust).ToList();
+            IEnumerable<Customer> custList =GetCustomer();
             return View(custList);
         }
-        public List<Customer> GetCustomer()
+        private IEnumerable<Customer> GetCustomer()
         {
-            List<Customer> list = new List<Customer> {
-             new Customer() {Name="John", Address="123 Hadley",ID=777},
-            new Customer() { Name = "Gracy Gold", Address = "123 Guy", ID = 111 }
+           return  new List<Customer> {
+             new Customer() {Name="John", Address="123 Hadley",ID=1},
+            new Customer() { Name = "Gracy Gold", Address = "123 Guy", ID = 2 }
         };
-            return list;
+      
             
         }
 
@@ -32,7 +63,7 @@ namespace VidPlace.Controllers
         {
 
 
-            Customer cust = (from data in GetCustomer()
+            Customer cust = (from data in getCustomers()
                              where data.ID == id
                              select data).SingleOrDefault();
             if (cust == null) {
@@ -41,7 +72,7 @@ namespace VidPlace.Controllers
 
             return View(cust);
         }
-      
+      ****************************************************************/
 
 
     }

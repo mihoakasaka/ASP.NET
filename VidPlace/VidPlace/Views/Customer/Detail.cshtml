@@ -8,4 +8,11 @@
 <h3>ID: @Model.ID  <br />
     Name : @Model.Name</h3>
 <p>Address: @Model.Address</p>
+@if (Model.Birthday.HasValue)
+{
+
+    <p> Date og birth : @Model.Birthday </p>
+
+        }
+
 
