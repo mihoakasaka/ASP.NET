@@ -20,10 +20,15 @@ namespace VidPlace.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        //My DB context
+        //My Database context
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Media> Medias { get; set; }
+        public DbSet<MembershipType> MembershipTypes { get; set; }
 
-        //context by system
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<MediaType> MediaTypes { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
+        //
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

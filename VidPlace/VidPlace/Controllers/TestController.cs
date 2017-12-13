@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using VidPlace.Models;
 
-
 namespace VidPlace.Controllers
 {
     public class TestController : Controller
@@ -16,15 +15,26 @@ namespace VidPlace.Controllers
             return View();
         }
 
-        // Get: getString
-        public string getString() {
-
-            return "Hello World, Welcome to MVC.";
+        //Get getString
+        public string getString()
+        {
+            return "Hello World, Welcome to MVC";
         }
 
+        //Get customer
+        public Customer GetCustomer()
+        {
+            Customer c = new Customer();
+            c.Name = "Thomas Adinson";
+            c.Address = "Montreal,QC, Canada";
+            return c;
+
+        }
+
+        //getview
         public ActionResult GetView()
         {
-            return View("MyView");
+            return View("ViewTest");
         }
 
         public ActionResult GetDeveloper()
@@ -32,24 +42,13 @@ namespace VidPlace.Controllers
             return View("Developer");
         }
 
-
-        public Customer GetCustomer()
+        public ActionResult getLayoutView()
         {
-            Customer c = new Customer();
-            c.Name = "John";
-            c.Address = "123 5thAvenue";
-            return c;
+            return View("ViewLayOut");
         }
 
-      
-
 
     }
 
-  
-    }
-
-
-
-
-
+    
+}

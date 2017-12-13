@@ -7,10 +7,16 @@ namespace VidPlace.Models
 {
     public class MembershipType
     {
-        public byte ID { get; set; }
-        public string Name { get; set; }
+        public byte Id { get; set; }
         public short SignUpFee { get; set; }
-        public byte DurationInMonth { get; set; }
+        public byte DurationInMonths { get; set; }
         public byte DiscountRate { get; set; }
+        public string Name { get; set; }
+
+        public static readonly byte Unknown = 0;
+        public static readonly byte PayAsyouGo = 1;
+        public static readonly byte Monthly = 2;
+        public static readonly byte Querterly = 3;
+        public static readonly byte Annual = 4;
     }
 }

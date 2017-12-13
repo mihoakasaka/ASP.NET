@@ -9,6 +9,6 @@ namespace VidPlace.ViewModels
     public class customerMediaViewModel
     {
         public Media media { get; set; }
-        public List<Customer> customersList { get; set; }
+        public List<Customer> customers { get; set; }
     }
 }
