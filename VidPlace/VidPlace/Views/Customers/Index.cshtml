@@ -1,0 +1,38 @@
+﻿@model IEnumerable<VidPlace.Models.Customer>
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+@if (!Model.Any())
+{
+    <p>There are no Customers availble.</p>
+}
+else
+{
+    <table class="table table-dark table-hover">
+        <thread>
+            <tr>
+                <th>Customer (Click to Edit)</th>
+                <th>Membership Type</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thread>
+        <tbody>
+            @foreach(var customer in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new { id = customer.ID }, null)</td>
+                    <td>@customer.MembershipType.Name</td>
+                    <td>@Html.ActionLink("Details", "Details", "Customers", new { id = customer.ID }, null)</td>
+                    <td>@Html.ActionLink("Select for Rental", "Create", "Rentals", new { id = customer.ID }, null)</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
