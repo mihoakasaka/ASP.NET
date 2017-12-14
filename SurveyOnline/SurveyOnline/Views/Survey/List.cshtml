@@ -1,0 +1,40 @@
+﻿@model IEnumerable<SurveyOnline.Models.Survey>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of surveys</h2>
+
+
+@if (!Model.Any())
+{
+    <p>There are no Surveys availble.</p>
+}
+else
+{
+    <table class="table table-dark table-hover">
+        <thread>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th colspan="3">Action</th>
+                
+            </tr>
+        </thread>
+        <tbody>
+            @foreach (var s in Model)
+            {
+                <tr>
+                    <td>@s.ID</td>
+                    <td>@s.Title</td>
+                    <td>@Html.ActionLink("Details", "Details", "Surveys", new { id = s.ID }, null)</td>
+                    <td>@Html.ActionLink("Edit", "Edit", "Surveys", new { id = s.ID }, null)</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "Surveys", new { id = s.ID }, null)</td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}

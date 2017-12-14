@@ -1,0 +1,53 @@
+﻿@model SurveyOnline.ViewModels.UserFormModelView
+@{
+    ViewBag.Title = "UserForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UserForm</h2>
+
+@using (Html.BeginForm("Save", "Survey"))
+{
+    
+    <a href="~/User/ListSurveys">List of available surveys</a>
+    @Html.ValidationSummary();
+  
+    <div class="form-group">
+        @Html.LabelFor(u => u.User.SurveyAnswer)
+        @Html.TextBoxFor(u => u.User.SurveyAnswer, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.User.SurveyAnswer)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(u => u.User.FName)
+        @Html.TextBoxFor(u => u.User.FName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.User.FName)
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(u => u.User.LName)
+        @Html.TextBoxFor(u => u.User.LName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.User.LName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.User.Email)
+        @Html.TextBoxFor(u => u.User.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.User.Email)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.User.Phone)
+        @Html.TextBoxFor(u => u.User.Phone, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.User.Phone)
+    </div>
+
+
+
+
+    @Html.HiddenFor(u => u.User.ID)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button><br>
+
+    <a href="~/Survey/New"> << Back </a>
+
+}
